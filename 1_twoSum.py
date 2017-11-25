@@ -1,12 +1,10 @@
 
 def twoSum(nums, target):
     diff_cache = {}
-
     for i in range(len(nums)):
         x = nums[i]
         if x in diff_cache: return sorted([diff_cache[x], i])
         else: diff_cache[target - x] = i
-
     assert 0, "no solution"
 
 if __name__ == "__main__":
